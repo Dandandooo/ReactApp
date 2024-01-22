@@ -1,0 +1,169 @@
+[
+  {
+    "CustomerId": 1,
+    "CustomerName": "Elizabeth",
+    "Date": "2021-02-01 08:30:00.000",
+    "Items": [
+      {
+        "Item": "Candle",
+        "ItemPrice": "$3.00",
+        "Quantity": "3"
+      },
+      {
+        "Item": "Book",
+        "ItemPrice": "$15.00",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Pen",
+        "ItemPrice": "$0.75",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Paper",
+        "ItemPrice": "$5.25",
+        "Quantity": "1"
+      }
+    ],
+    "OrderId": 1,
+    "Total": "$30.00"
+  },
+  {
+    "CustomerId": 2,
+    "CustomerName": "Alexander",
+    "Date": "2021-02-02 10:00:00.000",
+    "Items": [
+      {
+        "Item": "Book",
+        "ItemPrice": "$15.00",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Jar",
+        "ItemPrice": "$12.50",
+        "Quantity": "3"
+      }
+    ],
+    "OrderId": 2,
+    "Total": "$52.50"
+  },
+  {
+    "CustomerId": 1,
+    "CustomerName": "Elizabeth",
+    "Date": "2021-02-02 12:46:00.000",
+    "Items": [
+      {
+        "Item": "Pen",
+        "ItemPrice": "$0.75",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Paper",
+        "ItemPrice": "$5.25",
+        "Quantity": "1"
+      }
+    ],
+    "OrderId": 3,
+    "Total": "$6.00"
+  },
+  {
+    "CustomerId": 3,
+    "CustomerName": "Emira",
+    "Date": "2021-02-03 15:25:00.000",
+    "Items": [
+      {
+        "Item": "Candle",
+        "ItemPrice": "$3.00",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Book",
+        "ItemPrice": "$15.00",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Jar",
+        "ItemPrice": "$12.50",
+        "Quantity": "1"
+      }
+    ],
+    "OrderId": 4,
+    "Total": "$30.50"
+  },
+  {
+    "CustomerId": 4,
+    "CustomerName": "LJ",
+    "Date": "2021-02-04 18:50:00.000",
+    "Items": [
+      {
+        "Item": "Pen",
+        "ItemPrice": "$0.75",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Book",
+        "ItemPrice": "$15.00",
+        "Quantity": "2"
+      },
+      {
+        "Item": "Paper",
+        "ItemPrice": "$5.25",
+        "Quantity": "1"
+      }
+    ],
+    "OrderId": 5,
+    "Total": "$36.00"
+  },
+  {
+    "CustomerId": 5,
+    "CustomerName": "Armand",
+    "Date": "2021-02-04 08:05:00.000",
+    "Items": [
+      {
+        "Item": "Book",
+        "ItemPrice": "$15.00",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Jar",
+        "ItemPrice": "$12.50",
+        "Quantity": "3"
+      }
+    ],
+    "OrderId": 6,
+    "Total": "$52.50"
+  },
+  {
+    "CustomerId": 6,
+    "CustomerName": "Elizabeth",
+    "Date": "2021-02-06 17:30:00.000",
+    "Items": [
+      {
+        "Item": "Movie",
+        "ItemPrice": "$18.00",
+        "Quantity": "1"
+      },
+      {
+        "Item": "Jar",
+        "ItemPrice": "$12.50",
+        "Quantity": "1"
+      }
+    ],
+    "OrderId": 7,
+    "Total": "$30.50"
+  },
+  {
+    "CustomerId": 3,
+    "CustomerName": "Emira",
+    "Date": "2021-02-08 16:30:00.000",
+    "Items": [
+      {
+        "Item": "Movie",
+        "ItemPrice": "$18.00",
+        "Quantity": "1"
+      }
+    ],
+    "OrderId": 8,
+    "Total": "$18"
+  }
+]

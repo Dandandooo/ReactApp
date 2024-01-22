@@ -1,0 +1,10 @@
+.HomeButton {
+  color: '#f0f',
+  fontSize: '1.5rem',
+  fontWeight: 'bold',
+  textDecoration: 'none',
+  '&:hover': {
+    color: '#fff';
+    textDecoration: 'none',
+  }
+}
