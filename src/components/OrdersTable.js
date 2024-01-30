@@ -1,4 +1,4 @@
-import data from './receipts.json';
+import data from '../receipts.json';
 import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -9,7 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {Link} from "react-router-dom";
 
-export default function OrdersTable() {
+function OrdersTable() {
     return (
         <TableContainer component={Paper}>
             <Table sx = {{ minWidth: 650 }} aria-label="simple table">
@@ -37,3 +37,5 @@ export default function OrdersTable() {
         </TableContainer>
     );
 }
+
+export default OrdersTable;

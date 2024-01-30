@@ -2,27 +2,43 @@ import React from 'react';
 import {Toolbar, AppBar, Button} from "@mui/material";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
+import { createTheme, ThemeProvider, alpha } from '@mui/material/styles';
+
+let theme = createTheme({});
+
+theme = createTheme({
+    palette: {
+        salmon: theme.palette.augmentColor( {
+            color: {
+                main: '#FF5733',
+            },
+            name: 'salmon',
+        }),
+        pink: theme.palette.augmentColor( {
+            color: {
+                main: '#ff6cb1',
+            },
+            name: 'pink',
+        }),
+    },
+});
+
+const AppBarTheme = "pink";
 
 
-const StyledAppBar = styled(AppBar)`
-  position: sticky;
-`
+const StyledAppBar = styled(AppBar).attrs({
+    position: "sticky",
+    color: AppBarTheme,
+})``;
 
 const StyledButton = styled(Button).attrs({
   variant: "contained",
-  color: "primary"
-})`
-    margin: 8px;
-    background-color: #0067d6;
-    color: #fff;
-
-    &:hover {
-        background-color: #0050a1;
-    }
-`;
+  color: AppBarTheme,
+})``;
 
 const StyledLink = styled(Link)`
     text-decoration: none;
+    margin: 5px;
 `;
 
 function Header() {
@@ -41,7 +57,9 @@ function Header() {
 
   return (
     <header>
-      <StyledAppBar>{displayDesktop()}</StyledAppBar>
+        <ThemeProvider theme={theme}>
+            <StyledAppBar>{displayDesktop()}</StyledAppBar>
+        </ThemeProvider>
     </header>
   )
 }

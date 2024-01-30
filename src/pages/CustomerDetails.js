@@ -1,8 +1,8 @@
 import React from "react";
 
-import Header from "./Nav";
+import Header from "../Nav";
 import { useParams } from "react-router-dom";
-import data from "./receipts.json";
+import data from "../receipts.json";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -10,9 +10,18 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom'
+import styled from 'styled-components';
 
-export default function OrderDetails() {
+const StyledTableContainer = styled(TableContainer)
+`
+    width: 100%;
+    margin: 20px;
+    margin-inline: 40px;
+`;
+
+function OrderDetails() {
     const customerId = useParams().id;
     const customerDetails = getCustomerDetails(customerId);
     const items = getItems(customerId);
@@ -23,13 +32,13 @@ export default function OrderDetails() {
             <div>
                 <Header/>
             </div>
-            <div style={{marginLeft:"20px"}}>
-                <h1>Customer Details</h1> {customerDetails && 
+            <div>
+                <Typography variant='h2' fontFamily={'Honk'}>Customer Details</Typography> {customerDetails &&
                 <>
-                    <h2>Customer (ID): {customerDetails.CustomerName} ({customerDetails.CustomerId}) </h2>
-                    <h3>Total Spent: {total}</h3>
-                    <h3>Orders:</h3>
-                    <TableContainer component={Paper} key="OrderTable">
+                    <Typography variant='h4'>Customer (ID): {customerDetails.CustomerName} ({customerDetails.CustomerId}) </Typography>
+                    <Typography variant='h4'>Total Spent: {total}</Typography>
+                    <Typography variant='h4'>Orders:</Typography>
+                    <StyledTableContainer component={Paper} key="OrderTable">
                         <Table>
                             <TableHead>
                                 <TableRow>
@@ -48,9 +57,9 @@ export default function OrderDetails() {
                                 ))}
                             </TableBody>
                         </Table>
-                    </TableContainer>
-                    <h3>All Items:</h3>
-                    <TableContainer component={Paper} key="ItemTable">
+                    </StyledTableContainer>
+                    <Typography variant='h4'>All Items:</Typography>
+                    <StyledTableContainer component={Paper} key="ItemTable">
                         <Table>
                             <TableHead>
                                 <TableRow>
@@ -61,8 +70,7 @@ export default function OrderDetails() {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {items.map((order, index) => (
-                                    
+                                {items.map((order) => (
                                         order.Items.map((item, index) => (
                                             <TableRow key={index}>
                                                 <TableCell>{<Link to={"/orders/" + order.OrderId}>{order.OrderId}</Link>}</TableCell>
@@ -74,7 +82,7 @@ export default function OrderDetails() {
                                 ))}
                             </TableBody>
                         </Table>
-                    </TableContainer>
+                    </StyledTableContainer>
                 </>}
             </div>
         </div>
@@ -88,3 +96,5 @@ function getCustomerDetails(customerId) {
 function getItems(customerId) {
     return data.filter(customer => customer.CustomerId === Number(customerId));
 }
+
+export default OrderDetails;
