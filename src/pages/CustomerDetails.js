@@ -1,18 +1,11 @@
 import React from "react";
 
-import Header from "../Nav";
-import { useParams } from "react-router-dom";
-import data from "../receipts.json";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom'
+import { useParams, Link } from "react-router-dom";
+import data from "../data/receipts.json";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Typography } from '@mui/material';
 import styled from 'styled-components';
+import { Header } from "../components";
 
 const StyledTableContainer = styled(TableContainer)
 `
@@ -33,11 +26,11 @@ function OrderDetails() {
                 <Header/>
             </div>
             <div>
-                <Typography variant='h2' fontFamily={'Honk'}>Customer Details</Typography> {customerDetails &&
+                <Typography variant='h1'>Customer Details</Typography> {customerDetails &&
                 <>
-                    <Typography variant='h4'>Customer (ID): {customerDetails.CustomerName} ({customerDetails.CustomerId}) </Typography>
-                    <Typography variant='h4'>Total Spent: {total}</Typography>
-                    <Typography variant='h4'>Orders:</Typography>
+                    <Typography variant='h2'>Customer (ID): {customerDetails.CustomerName} ({customerDetails.CustomerId}) </Typography>
+                    <Typography variant='h3'>Total Spent: {total}</Typography>
+                    <Typography variant='h3'>Orders:</Typography>
                     <StyledTableContainer component={Paper} key="OrderTable">
                         <Table>
                             <TableHead>
@@ -58,7 +51,7 @@ function OrderDetails() {
                             </TableBody>
                         </Table>
                     </StyledTableContainer>
-                    <Typography variant='h4'>All Items:</Typography>
+                    <Typography variant='h3'>All Items:</Typography>
                     <StyledTableContainer component={Paper} key="ItemTable">
                         <Table>
                             <TableHead>

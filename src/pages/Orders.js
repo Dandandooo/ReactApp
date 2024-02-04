@@ -1,8 +1,7 @@
 import React from "react";
 
-import OrdersTable from "../components/OrdersTable";
-import Header from "../Nav";
-import Typography from "@mui/material/Typography";
+import { Header, OrdersTable } from "../components";
+import { Typography } from "@mui/material";
 
 function Orders() {
     return (
@@ -11,7 +10,7 @@ function Orders() {
                 <Header/>
             </div>
             <div style={{margin: "30px", textAlign: "center"}}>
-                <Typography variant='h2' fontFamily={"Honk"}>Orders</Typography>
+                <Typography variant='h1'>Orders</Typography>
                 <OrdersTable/>
             </div>
         </div>

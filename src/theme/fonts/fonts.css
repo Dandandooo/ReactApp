@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Honk';
+    src: url('./Honk.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url('./RobotoSlab.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url('./Orbitron.ttf') format('truetype');
+}
+

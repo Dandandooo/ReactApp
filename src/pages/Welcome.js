@@ -1,8 +1,7 @@
 import React from 'react';
 import {Typography} from '@mui/material';
-import Header from "../../components/header";
+import { Header } from "../components";
 import styled from "styled-components";
-import "./Welcome.css";
 
 const StyledWelcome = styled (Typography).attrs({
     component: "div",
