@@ -11,30 +11,34 @@ import {Link} from "react-router-dom";
 
 function OrdersTable() {
     return (
-        <TableContainer component={Paper}>
-            <Table sx = {{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Order ID</TableCell>
-                        <TableCell>Customer ID</TableCell>
-                        <TableCell>Customer</TableCell>
-                        <TableCell>Date</TableCell>
-                        <TableCell>Total</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {data.map(
-                        (order, index) => <TableRow key={order.OrderId}>
-                            <TableCell>{<Link to={"/orders/" + order.OrderId}>{order.OrderId}</Link>}</TableCell>
-                            <TableCell>{<Link to={"/customers/" + order.CustomerId}>{order.CustomerId}</Link>}</TableCell>
-                            <TableCell>{<Link to={"/customers/" + order.CustomerId}>{order.CustomerName}</Link>}</TableCell>
-                            <TableCell>{order.Date}</TableCell>
-                            <TableCell>{order.Total}</TableCell>
-                        </TableRow>
-                    )}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <div class={"row justify-content-center"}>
+            <div class={"col-11"}>
+                <TableContainer component={Paper}>
+                    <Table sx = {{ minWidth: 650 }} aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Order ID</TableCell>
+                                <TableCell>Customer ID</TableCell>
+                                <TableCell>Customer</TableCell>
+                                <TableCell>Date</TableCell>
+                                <TableCell>Total</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {data.map(
+                                (order, index) => <TableRow key={order.OrderId}>
+                                    <TableCell>{<Link to={"/orders/" + order.OrderId}>{order.OrderId}</Link>}</TableCell>
+                                    <TableCell>{<Link to={"/customers/" + order.CustomerId}>{order.CustomerId}</Link>}</TableCell>
+                                    <TableCell>{<Link to={"/customers/" + order.CustomerId}>{order.CustomerName}</Link>}</TableCell>
+                                    <TableCell>{order.Date}</TableCell>
+                                    <TableCell>{order.Total}</TableCell>
+                                </TableRow>
+                            )}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </div>
+        </div>
     );
 }
 
