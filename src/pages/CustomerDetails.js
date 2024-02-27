@@ -13,7 +13,7 @@ const StyledTableContainer = styled(TableContainer)
     margin-bottom: 20px;
 `;
 
-function OrderDetails() {
+function CustomerDetails() {
     const customerId = useParams().id;
     const customerDetails = getCustomerDetails(customerId);
     const items = getItems(customerId);
@@ -89,4 +89,5 @@ function getItems(customerId) {
     return data.filter(customer => customer.CustomerId === Number(customerId));
 }
 
-export default OrderDetails;
+module.exports = CustomerDetails;d
+export default CustomerDetails;

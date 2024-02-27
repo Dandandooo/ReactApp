@@ -41,5 +41,5 @@ function OrdersTable() {
         </div>
     );
 }
-
+module.exports = OrdersTable;
 export default OrdersTable;

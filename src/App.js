@@ -9,14 +9,16 @@ import {Theme} from "./theme";
 function App() {
   return (
     <div className="App">
-        <MuiThemeProvider theme={Theme}>
-            <Routes>
-                <Route exact path="/" element={<Welcome/>} />
-                <Route exact path="/orders" element={<Orders/>} />
-                <Route path="/orders/:id" element={<OrderDetails/>} />
-                <Route path="/customers/:id" element={<CustomerDetails/>} />
-            </Routes>
-        </MuiThemeProvider>
+        <StyledThemeProvider theme={Theme}>
+            <MuiThemeProvider theme={Theme}>
+                <Routes>
+                    <Route exact path="/" element={<Welcome/>} />
+                    <Route exact path="/orders" element={<Orders/>} />
+                    <Route path="/orders/:id" element={<OrderDetails/>} />
+                    <Route path="/customers/:id" element={<CustomerDetails/>} />
+                </Routes>
+            </MuiThemeProvider>
+        </StyledThemeProvider>
     </div>
   );
 }
