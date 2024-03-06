@@ -89,5 +89,5 @@ function getItems(customerId) {
     return data.filter(customer => customer.CustomerId === Number(customerId));
 }
 
-module.exports = CustomerDetails;d
+// module.exports = CustomerDetails;
 export default CustomerDetails;
