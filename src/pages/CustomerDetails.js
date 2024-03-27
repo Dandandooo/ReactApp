@@ -13,6 +13,7 @@ const StyledTableContainer = styled(TableContainer)
     margin-bottom: 20px;
 `;
 
+
 function CustomerDetails() {
     const customerId = useParams().id;
     const customerDetails = getCustomerDetails(customerId);
